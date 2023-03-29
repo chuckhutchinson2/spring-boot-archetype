@@ -1,8 +1,8 @@
-package ${package}service.impl;
+package ${package}.service.impl;
 
 import ${package}.model.*;
-import ${package}.repository.PlantRepository;
-import ${package}.service.${serviceName};
+import ${package}.repository.${serviceName}Repository;
+import ${package}.service.${serviceName}Service;
 
 import org.springframework.stereotype.Component;
 

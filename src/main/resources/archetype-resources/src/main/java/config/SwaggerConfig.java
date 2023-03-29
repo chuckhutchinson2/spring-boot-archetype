@@ -16,8 +16,8 @@ public class SwaggerConfig {
         String linkedInURL = "https://www.linkedin.com/in/hutchinsonchuck/";
         String licenseURL = "https://raw.githubusercontent.com/chuckhutchinson2/raisedbed/main/LICENSE.txt";
         return new OpenAPI().info(
-                new Info().title("Raised Bed Garden")
-                        .description("Raised Bed Garden to plant crops")
+                new Info().title("${name}")
+                        .description("${description}")
                         .summary("This is a sample spring boot REST application with Jacoco, Swagger showing a sample Controller, Service and Repository")
                         .version("v1.0")
                         .contact(new Contact().name(contactName).url(linkedInURL))
