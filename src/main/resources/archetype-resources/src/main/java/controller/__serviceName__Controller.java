@@ -24,7 +24,7 @@ public class ${serviceName}Controller {
 
     @GetMapping("/${modelClass.toLowerCase()}s/{id}")
     ResponseEntity<List<${modelClass}>> getPlants(@PathVariable String id) {
-        List<${modelClass}> ${modelClass.toLowerCase()}s = ${serviceName.toLowerCase()}Service.getPlants(id);
+        List<${modelClass}> ${modelClass.toLowerCase()}s = ${serviceName.toLowerCase()}Service.get${modelClass}s(id);
 
         return new ResponseEntity<>(${modelClass.toLowerCase()}s, HttpStatus.OK);
     }
