@@ -7,7 +7,7 @@
     <groupId>org.example</groupId>
     <artifactId>springboot-archetype</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>maven-springboot-archetype</name>
+    <name>maven-archetype</name>
     <packaging>maven-archetype</packaging>
 
     <build>
@@ -20,8 +20,8 @@
         </extensions>
     </build>
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <archetype-packaging.version>3.0.1</archetype-packaging.version>
     </properties>
 

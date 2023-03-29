@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archetype-descriptor name="basic">
     <requiredProperties>
+        <requiredProperty key="name">
+            <defaultValue>GarbageCollector</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="description">
+            <defaultValue>GarbageCollector collects trash and hauls it to the dump.</defaultValue>
+        </requiredProperty>
         <requiredProperty key="serviceName">
             <defaultValue>Trash</defaultValue>
         </requiredProperty>
