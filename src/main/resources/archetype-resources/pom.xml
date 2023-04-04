@@ -87,6 +87,7 @@
                     <excludes>
                         <exclude>**/config/*.class</exclude>
                         <exclude>**/model/*.class</exclude>
+                        <exclude>**/io/*.class</exclude>
                         <exclude>**/*Application.class</exclude>
                     </excludes>
                 </configuration>
@@ -115,6 +116,7 @@
                                     <excludes>
                                         <exclude>**/config/*.class</exclude>
                                         <exclude>**/model/*.class</exclude>
+                                        <exclude>**/io/*.class</exclude>
                                         <exclude>**/*Application.class</exclude>
                                     </excludes>
                                     <limits>
