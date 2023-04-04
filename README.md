@@ -1,11 +1,19 @@
+
+ 
 # spring-boot-archetype
-Sample spring boot archetype to generate a custom REST service and can be used to bootstrap microservice development.  The archetype will also produce scripts to package the microservice in a docker container.
+Sample spring boot archetype to generate a custom REST service and can be used to bootstrap microservice development.  The archetype produces scripts to package the microservice in a docker container.
+
+```
+mvn archetype:generate -DarchetypeGroupId=org.example  -DarchetypeArtifactId=springboot-archetype  -DarchetypeVersion=1.0-SNAPSHOT
+```
 
 The archetype will generate 4 main classes
-- Controller class
-- Service  Class
-- Repository Class
-- Model Class
+| Class      | Description |
+| ---------- | ------------------------------------------------------------------------------------------- |
+| Controller | |
+| Service | |
+| Repository | |
+| Model | |
 
 The following sequence diagram depicts the flow
 ```mermaid
@@ -25,7 +33,7 @@ The archetype will generate a skeleton project with the following technologies.
 | [Microservices with Spring](https://spring.io/microservices) |
 | [Swagger](https://swagger.io/) |
 | [lombok](https://projectlombok.org/) |
-| [docker|(https://www.docker.com/) |
+| [docker](https://www.docker.com/) |
 | [Jacoco](https://www.jacoco.org/jacoco/) |
 | [Mockito](https://site.mockito.org/) |
 
