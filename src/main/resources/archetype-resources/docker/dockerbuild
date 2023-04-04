@@ -1,0 +1,7 @@
+mkdir -p dist
+
+cp ../target/${artifactId}-${version}.jar dist/${artifactId}-${version}.jar
+
+docker build -t ${artifactId.toLowerCase()}-services .
+
+rm -fr dist

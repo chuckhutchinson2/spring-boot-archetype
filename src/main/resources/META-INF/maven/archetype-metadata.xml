@@ -34,8 +34,23 @@
     <fileSets>
         <fileSet filtered="true">
             <directory>bin</directory>
+            <lineEnding>unix</lineEnding>
+            <fileMode>0755</fileMode>
             <includes>
-                <include>*.*</include>
+                <include>*.sh</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true">
+            <directory>bin</directory>
+            <lineEnding>crlf</lineEnding>
+            <includes>
+                <include>*.bat</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true">
+            <directory>docker</directory>
+            <includes>
+                <include>**</include>
             </includes>
         </fileSet>
         <fileSet filtered="true" packaged="true">
