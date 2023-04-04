@@ -3,13 +3,14 @@ Sample spring boot archetype to generate a custom REST service.
 
 The archetype will generate a skeleton project with the following technologies.
 
-|Framework|
-|[lombok](https://projectlombok.org/)|
-|[Spring Boot](https://spring.io/)|
-|[Microservices with Spring](https://spring.io/microservices)|
-|[Swagger](https://swagger.io/)|
-|[Jacoco](https://www.jacoco.org/jacoco/)|
-|[Mockito](https://site.mockito.org/)|
+| Framework |
+| --------- |
+| [lombok](https://projectlombok.org/) |
+| [Spring Boot](https://spring.io/) |
+| [Microservices with Spring](https://spring.io/microservices) |
+| [Swagger](https://swagger.io/) |
+| [Jacoco](https://www.jacoco.org/jacoco/) |
+| [Mockito](https://site.mockito.org/) |
 
 ## Sample usage of the archetype
 
