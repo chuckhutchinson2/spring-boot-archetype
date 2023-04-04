@@ -4,5 +4,5 @@ import lombok.Data;
 
 @Data
 public class ${modelClass} {
-    private String id;
+    private ${primaryKeyType} id;
 }

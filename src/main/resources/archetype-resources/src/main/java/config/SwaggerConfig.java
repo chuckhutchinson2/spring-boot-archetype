@@ -12,9 +12,12 @@ import org.springframework.context.annotation.Configuration;
 public class SwaggerConfig {
     @Bean
     public OpenAPI openAPI() {
-        String contactName = "Chuck Hutchinson";
-        String linkedInURL = "https://www.linkedin.com/in/hutchinsonchuck/";
-        String licenseURL = "https://raw.githubusercontent.com/chuckhutchinson2/raisedbed/main/LICENSE.txt";
+        String contactName = "${yourName}";
+        String linkedInURL = "${yourUrl}";
+
+        // You might want to evaluate which license to use
+        // https://www.gnu.org/licenses/licenses.en.html#GPL
+        String licenseURL = "${licenseUrl}";
         return new OpenAPI().info(
                 new Info().title("${name}")
                         .description("${description}")

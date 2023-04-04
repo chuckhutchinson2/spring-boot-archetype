@@ -3,7 +3,7 @@
 mvn archetype:generate -DarchetypeGroupId=org.example \
  -DarchetypeArtifactId=springboot-archetype \
  -DarchetypeVersion=1.0-SNAPSHOT \
- -DgroupId=org.garden.home \
+ -DgroupId=org.example.garden \
  -DartifactId=RaisedBedGarden \
  -Dversion=1.0-SNAPSHOT \
  -DmodelClass=Plant \

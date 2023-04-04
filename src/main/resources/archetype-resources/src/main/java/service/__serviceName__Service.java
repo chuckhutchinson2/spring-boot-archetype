@@ -5,5 +5,5 @@ import ${package}.model.*;
 import java.util.List;
 
 public interface ${serviceName}Service {
-    List<${modelClass}> get${modelClass}s(String id);
+    List<${modelClass}> get${modelClass}s(${primaryKeyType} id);
 }

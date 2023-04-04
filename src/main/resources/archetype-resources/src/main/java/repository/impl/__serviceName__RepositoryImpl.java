@@ -14,7 +14,12 @@ import java.util.List;
 @Slf4j
 public class ${serviceName}RepositoryImpl implements ${serviceName}Repository {
     @Override
-    public List<${modelClass}> get${modelClass}s(String id) {
-        return new ArrayList<>();
+    public List<${modelClass}> get${modelClass}s(${primaryKeyType} id) {
+        log.info("get${modelClass}s(${primaryKeyType} {}) ", id);
+        List<${modelClass}> ${modelClass.toLowerCase()}s = new ArrayList<>();
+        ${modelClass} ${modelClass.toLowerCase()} = new ${modelClass}();
+        ${modelClass.toLowerCase()}.setId(id);
+        ${modelClass.toLowerCase()}s.add(${modelClass.toLowerCase()});
+        return ${modelClass.toLowerCase()}s;
     }
 }

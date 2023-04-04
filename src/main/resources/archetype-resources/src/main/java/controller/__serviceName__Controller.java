@@ -23,7 +23,7 @@ public class ${serviceName}Controller {
     }
 
     @GetMapping("/${modelClass.toLowerCase()}s/{id}")
-    ResponseEntity<List<${modelClass}>> get${modelClass}s(@PathVariable String id) {
+    ResponseEntity<List<${modelClass}>> get${modelClass}s(@PathVariable ${primaryKeyType} id) {
         List<${modelClass}> ${modelClass.toLowerCase()}s = ${serviceName.toLowerCase()}Service.get${modelClass}s(id);
 
         return new ResponseEntity<>(${modelClass.toLowerCase()}s, HttpStatus.OK);

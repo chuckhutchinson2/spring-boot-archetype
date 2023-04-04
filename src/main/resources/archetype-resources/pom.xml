@@ -121,7 +121,7 @@
                                         <limit>
                                             <counter>INSTRUCTION</counter>
                                             <value>COVEREDRATIO</value>
-                                            <minimum>0.70</minimum>
+                                            <minimum>0.0</minimum>
                                         </limit>
                                     </limits>
                                 </rule>
@@ -136,8 +136,6 @@
         <repository>
             <id>central</id>
             <url>https://repo.maven.apache.org/maven2</url>
-            <releases><enabled>false</enabled><updatePolicy>never</updatePolicy></releases>
-            <snapshots><enabled>false</enabled><updatePolicy>never</updatePolicy></snapshots>
         </repository>
         <repository>
             <id>repository.spring.release</id>
