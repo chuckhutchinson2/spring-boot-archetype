@@ -10,7 +10,7 @@ mvn archetype:generate -DarchetypeGroupId=org.example  -DarchetypeArtifactId=spr
 
 ## Overview
 
-The intent of this archetype is to bootstrap the development of a microservice. The intent is not to generate a full application but a minimal application that you can customize for your requirements. The archetype generates a simple get endpoint where the controller deals with the REST endpoint logic and delegates to the service class for the business logic, which also in turn delegates to the repository class to persist model objects. 
+The intent of this archetype is to bootstrap the development of a microservice. The intent is not to generate a full application but a minimal application that you can customize for your requirements. The archetype generates a simple get endpoint where the controller deals with the REST endpoint logic and delegates to the service class for the business logic, which also in turn delegates to the repository class to persist model objects.  Then you can package the microservice in a docker container and deploy it. Scripts to build the docker image are also provided.  You may want to use a different base image. 
 
 | Class      | Description |
 | ---------- | ------------------------------------------------------------------------------------------- |
