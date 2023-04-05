@@ -10,7 +10,7 @@ mvn archetype:generate -DarchetypeGroupId=org.example  -DarchetypeArtifactId=spr
 # The archetype will generate 4 main classes
 | Class      | Description |
 | ---------- | ------------------------------------------------------------------------------------------- |
-| Controller | This is the @RestController and provides the @GetMapping to get a list of Model Objects. The get endpoint is integrated with Swagger for tetsing. |
+| Controller | This is the @RestController and provides the @GetMapping to get a list of Model Objects. The get endpoint is integrated with Swagger for testing. |
 | Service | This is a @Component and is autowired in the Controller.  Here you would write business logic on your model objects.  |
 | Repository | This is a @Component and is autowired in the Service.  Here you would put your database mappings to retrieve model objects.|
 | Model | This is a lombok model object annotated with @Data.  Here you would define the different attributes required by your problem domain. |
@@ -26,8 +26,13 @@ A sample Garden microservice might have the following classes: GardenController,
 The following sequence diagram depicts the flow
 ```mermaid
 sequenceDiagram
-    GardenController->>GardenService: getPlants()
-    GardenService-->>GardenRepository: getPlants()
+    Actor User
+    User ->>+ GardenController: getPlants()
+    GardenController->>+GardenService: getPlants()
+    GardenService-->>+GardenRepository: getPlants()
+    GardenRepository-->>-GardenService: plants
+    GardenService-->>-GardenController: plants
+    GardenController-->>-User: plants
     
 ```    
 
