@@ -4,13 +4,13 @@ import ${package}.io.JsonUtils;
 import ${package}.model.*;
 import ${package}.repository.${serviceName}Repository;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+@Repository
 @Slf4j
 public class ${serviceName}RepositoryImpl implements ${serviceName}Repository {
     @Override

@@ -12,12 +12,12 @@ mvn archetype:generate -DarchetypeGroupId=org.example  -DarchetypeArtifactId=spr
 
 The intent of this archetype is to bootstrap the development of a microservice. The intent is not to generate a full application but a minimal application that you can customize for your requirements. The archetype generates a simple get endpoint where the controller deals with the REST endpoint logic and delegates to the service class for the business logic, which also in turn delegates to the repository class to persist model objects.  Then you can package the microservice in a docker container and deploy it. Scripts to build the docker image are also provided.  You may want to use a different base image. 
 
-| Class      | Description |
-| ---------- | ------------------------------------------------------------------------------------------- |
+| Class      | Description                                                                                                                                       |
+| ---------- |---------------------------------------------------------------------------------------------------------------------------------------------------|
 | Controller | This is the @RestController and provides the @GetMapping to get a list of Model Objects. The get endpoint is integrated with Swagger for testing. |
-| Service | This is a @Component and is autowired in the Controller.  Here you would write business logic on your model objects.  |
-| Repository | This is a @Component and is autowired in the Service.  Here you would put your database mappings to retrieve model objects.|
-| Model | This is a lombok model object annotated with @Data.  Here you would define the different attributes required by your problem domain. |
+| Service | This is a @Service and is autowired in the Controller.  Here you would write business logic on your model objects.                                |
+| Repository | This is a @Repository and is autowired in the Service.  Here you would put your database mappings to retrieve model objects.                      |
+| Model | This is a lombok model object annotated with @Data.  Here you would define the different attributes required by your problem domain.              |
 
 The archetype also produces unit tests for the controller, service and repository classes using mockito. The produced pom file also has Jacoco configured to measure unit test converage. The minimum coverage is set to 0 so that you can turn it on when and if you need it. 
 
@@ -106,12 +106,12 @@ import org.example.garden.model.*;
 import org.example.garden.repository.GardenRepository;
 import org.example.garden.service.GardenService;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
 
-@Component
+@Service
 @Slf4j
 public class GardenServiceImpl implements GardenService {
     private GardenRepository gardenRepository;
@@ -149,13 +149,13 @@ package org.example.garden.repository.impl;
 import org.example.garden.model.*;
 import org.example.garden.repository.GardenRepository;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+@Repository
 @Slf4j
 public class GardenRepositoryImpl implements GardenRepository {
     @Override

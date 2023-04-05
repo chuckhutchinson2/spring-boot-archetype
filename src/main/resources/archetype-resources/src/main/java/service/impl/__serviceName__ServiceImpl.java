@@ -4,12 +4,12 @@ import ${package}.model.*;
 import ${package}.repository.${serviceName}Repository;
 import ${package}.service.${serviceName}Service;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
 
-@Component
+@Service
 @Slf4j
 public class ${serviceName}ServiceImpl implements ${serviceName}Service {
     private ${serviceName}Repository ${serviceName.toLowerCase()}Repository;
