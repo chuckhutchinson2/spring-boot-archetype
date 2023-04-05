@@ -1,6 +1,6 @@
 
  
-# spring-boot-archetype
+# org.example - spring-boot-archetype
 
 Sample spring boot archetype to generate a custom REST service and can be used to bootstrap microservice development.  The archetype produces scripts to package the microservice in a docker container.
 
