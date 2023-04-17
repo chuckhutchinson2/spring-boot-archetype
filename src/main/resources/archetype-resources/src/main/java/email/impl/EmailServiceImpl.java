@@ -3,6 +3,7 @@ package ${package}.email.impl;
 import ${package}.email.EmailService;
 
 import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
@@ -58,15 +59,15 @@ public class EmailServiceImpl implements EmailService {
     }
 
     @Override
-    public void sendMessage(String from, String to, String subject, Map<String, Object> templateModel) {
-        sendMessage(from, to, subject, templateModel, null);
+    public void sendMessage(String from, String to, String subject, String templateName, Map<String, Object> templateModel) {
+        sendMessage(from, to, subject, templateName, templateModel, null);
     }
 
     @Override
-    public void sendMessage(String from, String to, String subject, Map<String, Object> templateModel, File attachment) {
+    public void sendMessage(String from, String to, String subject, String templateName, Map<String, Object> templateModel, File attachment) {
         Context thymeleafContext = new Context();
         thymeleafContext.setVariables(templateModel);
-        String htmlBody = thymeleafTemplateEngine.process("template-thymeleaf.html", thymeleafContext);
+        String htmlBody = thymeleafTemplateEngine.process(templateName, thymeleafContext);
 
         sendEmail(from, to, subject, htmlBody, attachment);
     }
